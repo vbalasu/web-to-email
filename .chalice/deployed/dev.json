@@ -1,0 +1,39 @@
+{
+  "resources": [
+    {
+      "name": "rate_handler_role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::251566558623:role/web-to-email-dev-rate_handler",
+      "role_name": "web-to-email-dev-rate_handler"
+    },
+    {
+      "name": "rate_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:251566558623:function:web-to-email-dev-rate_handler"
+    },
+    {
+      "name": "rate_handler-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "web-to-email-dev-rate_handler-event"
+    },
+    {
+      "name": "api_handler_role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::251566558623:role/web-to-email-dev-api_handler",
+      "role_name": "web-to-email-dev-api_handler"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:251566558623:function:web-to-email-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "yzznad6s35",
+      "rest_api_url": "https://yzznad6s35.execute-api.us-east-1.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}

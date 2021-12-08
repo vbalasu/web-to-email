@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "lambda:InvokeFunction",
+                "dynamodb:GetItem",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:lambda:*:251566558623:function:*",
+                "arn:aws:dynamodb:us-east-1:251566558623:table/web-to-email-config",
+                "arn:*:logs:*:*:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "ses:SendRawEmail",
+            "Resource": "*"
+        }
+    ]
+}
