@@ -51,7 +51,7 @@ def index(email, url):
     html_to_email(html, email, url)
     return {'success': f'Sent {url} to {email}'}
 
-@app.schedule('rate(1 day)')
+#@app.schedule('rate(1 day)')  ## DISABLED
 def rate_handler(event):
     import boto3
     dynamodb = boto3.resource('dynamodb')
